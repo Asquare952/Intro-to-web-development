@@ -113,6 +113,116 @@ Users often skim a page by its headings. It is important to use headings to show
 
 `<h1>` headings should be used for main headings, followed by `<h2>` headings, then the less important `<h3>`, and so on.
 
+### HTML Block and Inline Elements
+
+Every HTML element has a default display value, depending on what type of element it is.
+
+The two most common display values are block and inline.
+
+
+### Block-level Elements
+
+A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+
+A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+
+Two commonly used block elements are: `<p>` and `<div>`.
+
+The `<p>` element defines a paragraph in an HTML document.
+
+The `<div>` element defines a division or a section in an HTML document.
+
+### Example
+
+``` html
+<p>Hello World</p>
+<div>Hello World</div>
+```
+
+Here are the block-level elements in HTML:
+
+`<address>` `<article>` `<aside>` `<blockquote>` `<canvas>` `<dd>` `<div>` `<dl>` `<dt>` `<fieldset>` `<figcaption>` `<figure>` `<footer>` `<form>` `<h1>-<h6>` `<header>` `<hr>` `<li>` `<main>` `<nav>` `<noscript>` `<ol>` `<p>` `<pre>` `<section>` `<table>` `<tfoot>` `<ul>` `<video>`
+
+### Inline Elements
+
+An inline element does not start on a new line.
+
+An inline element only takes up as much width as necessary.
+
+This is a `<span>` element inside a paragraph.
+
+### Example
+
+``` html
+<span>Hello World</span>
+```
+
+Here are the inline elements in HTML:
+
+`<a>` `<abbr>` `<acronym>` `<b>` `<bdo>` `<big>` `<br>` `<button>` `<cite>` `<code>` `<dfn>` `<em>` `<i>` `<img>` `<input>` `<kbd>` `<label>` `<map>` `<object>` `<output>` `<q>` `<samp>` `<script>` `<select>` `<small>` `<span>` `<strong>` `<sub>` `<sup>` `<textarea>` `<time>` `<tt>` `<var>`
+
+**Note:** An inline element cannot contain a block-level element!
+
+
+### HTML Div Element
+
+The `<div>` element is used as a container for other HTML elements.
+
+### The `<div>` Element
+
+The `<div>` element is by default a block element, meaning that it takes all available width, and comes with line breaks before and after.
+
+### Example
+
+A `<div>` element takes up all available width:
+
+``` html
+Lorem Ipsum <div>I am a div</div> dolor sit amet.
+```
+
+**The `<div>` element has no required attributes, but style, class and id are common.**
+
+### `<div>` as a container
+
+The `<div>` element is often used to group sections of a web page together.
+
+### Example
+
+A `<div>` element with HTML elements:
+
+``` html
+<div>
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>London has over 13 million inhabitants.</p>
+</div>
+```
+
+### Multiple `<div>` elements
+You can have many `<div>` containers on the same page.
+
+### Example
+
+``` html
+<div>
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>London has over 13 million inhabitants.</p>
+</div>
+
+<div>
+  <h2>Oslo</h2>
+  <p>Oslo is the capital city of Norway.</p>
+  <p>Oslo has over 600.000 inhabitants.</p>
+</div>
+
+<div>
+  <h2>Rome</h2>
+  <p>Rome is the capital city of Italy.</p>
+  <p>Rome has almost 3 million inhabitants.</p>
+</div>
+```
+
 ## HTML Lists
 
 HTML lists allow web developers to group a set of related items in lists.
@@ -429,3 +539,202 @@ This example will not submit the value of the "First name" input field:
   <input type="submit" value="Submit">
 </form>
 ```
+
+## HTML Semantic Elements
+
+### What are Semantic Elements?
+
+A semantic element clearly describes its meaning to both the browser and the developer.
+
+Examples of **non-semantic** elements: `<div>` and `<span>` - Tells nothing about its content.
+
+Examples of **semantic** elements: `<form>`, `<table>`, and `<article>` - Clearly defines its content.
+
+### Semantic Elements in HTML
+
+Many web sites contain HTML code like: `<div id="nav">` `<div class="header">` `<div id="footer">` to indicate navigation, header, and footer.
+
+In HTML there are some semantic elements that can be used to define different parts of a web page:
+
+- `<header>`
+- `<nav>`
+- `<main>`
+- `<section>`
+- `<article>`
+- `<aside>`
+- `<footer>`
+
+![html](https://www.w3schools.com/html/img_sem_elements.gif)
+
+### HTML `<header>` Element
+
+The `<header>` element represents a container for introductory content or a set of navigational links.
+
+A `<header>` element typically contains:
+
+- one or more heading elements (`<h1>` - `<h6>`)
+- logo or icon
+- authorship information
+
+**Note:** You can have several `<header>` elements in one HTML document. However, `<header>` cannot be placed within a `<footer>`, `<address>` or another `<header>` element.
+
+### Example
+
+A header for an `<article>`:
+
+``` html
+<article>
+  <header>
+    <h1>What Does WWF Do?</h1>
+    <p>WWF's mission:</p>
+  </header>
+  <p>WWF's mission is to stop the degradation of our planet's natural environment,
+  and build a future in which humans live in harmony with nature.</p>
+</article>
+```
+
+### HTML `<nav>` Element
+
+The `<nav>` element defines a set of navigation links.
+
+**Notice that NOT all links of a document should be inside a `<nav>` element. The `<nav>` element is intended only for major blocks of navigation links.**
+
+**Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.**
+
+### Example
+
+A set of navigation links:
+
+``` html
+<nav>
+  <a href="/html/">HTML</a> |
+  <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/jquery/">jQuery</a>
+</nav>
+```
+
+
+### HTML `<section>` Element
+
+The `<section>` element defines a section in a document.
+
+According to W3C's HTML documentation: "A section is a thematic grouping of content, typically with a heading."
+
+Examples of where a `<section>` element can be used:
+
+- Chapters
+- Introduction
+- News items
+- Contact information
+
+A web page could normally be split into sections for introduction, content, and contact information.
+
+### Example
+
+Two sections in a document:
+
+``` html
+<section>
+<h1>WWF</h1>
+<p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+</section>
+
+<section>
+<h1>WWF's Panda symbol</h1>
+<p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+</section>
+```
+
+### HTML `<article>` Element
+
+The `<article>` element specifies independent, self-contained content.
+
+An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+
+Examples of where the `<article>` element can be used:
+
+- Forum posts
+- Blog posts
+- User comments
+- Product cards
+- Newspaper articles
+
+### Example
+
+Three articles with independent, self-contained content:
+
+``` html
+<article>
+<h2>Google Chrome</h2>
+<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+</article>
+
+<article>
+<h2>Mozilla Firefox</h2>
+<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+</article>
+
+<article>
+<h2>Microsoft Edge</h2>
+<p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+</article>
+```
+
+### HTML `<aside>` Element
+
+The `<aside>` element defines some content aside from the content it is placed in (like a sidebar).
+
+The `<aside>` content should be indirectly related to the surrounding content.
+
+### Example
+
+Display some content aside from the content it is placed in:
+
+``` html
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+<aside>
+<h4>Epcot Center</h4>
+<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+```
+
+### HTML `<footer>` Element
+
+The `<footer>` element defines a footer for a document or section.
+
+A `<footer>` element typically contains:
+
+- authorship information
+- copyright information
+- contact information
+- sitemap
+- back to top links
+- related documents
+
+You can have several `<footer>` elements in one document.
+
+### Example
+
+A footer section in a document:
+
+``` html
+<footer>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+```
+
+### Semantic Elements in HTML
+
+Below is a list of some of the semantic elements in HTML.
+
+| Tag     | Description                                                                                                                                                                    |                                      |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| `<header>` | Specifies a header for a document or section |  
+| `<nav>` | Defines navigation links |
+| `<section>` | Defines a section in a document |
+| `<article>` | Defines independent, self-contained content |
+| `<aside>` | Defines content aside from the page content |
+| `<footer>` | Defines a footer for a document or section |
